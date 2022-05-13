@@ -16,6 +16,8 @@ const Edit = (props) => {
   };
 
   const addItem = () => {
+    //before add, set submittingStatus to true, to avoid the data is not updated when the user click the add button
+    props.submittingStatus.current = true;
     props.onAdd((prevData) => {
       return [{ id: v4(), todo, date, time }, ...prevData];
     });

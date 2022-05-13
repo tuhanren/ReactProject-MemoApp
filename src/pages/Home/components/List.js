@@ -14,6 +14,7 @@ const List = (props) => {
             date={date}
             time={time}
             deleteData={props.deleteData}
+            submittingStatus={props.submittingStatus}
           />
         ); //use destructuring to get the values from the object, to avoid null values issues
       })}
