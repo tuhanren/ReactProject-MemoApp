@@ -1,9 +1,12 @@
 import React from "react";
 
-const Item = () => {
+const Item = ({ todo, date, time }) => {
   return (
     <div className="item">
-      Item
+      <div>
+        <p>{todo}</p>
+        <p>{`${date} ${time}`}</p>
+      </div>
       <button className="remove">Remove</button>
     </div>
   );
