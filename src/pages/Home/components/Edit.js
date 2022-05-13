@@ -17,8 +17,11 @@ const Edit = (props) => {
 
   const addItem = () => {
     props.onAdd((prevData) => {
-      return [...prevData, { id: v4(), todo, date, time }];
+      return [{ id: v4(), todo, date, time }, ...prevData];
     });
+    setTodo("");
+    setDate("");
+    setTime("");
   };
 
   return (
