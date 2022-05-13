@@ -5,9 +5,11 @@ const List = (props) => {
   return (
     <div className="list">
       {props.listData.map((item) => {
-        const { todo, date, time } = item;
+        const { todo, date, time, id } = item;
         return (
           <Item
+            key={id}
+            id={id}
             todo={todo}
             date={date}
             time={time}
